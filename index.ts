@@ -7,6 +7,7 @@ const app = express()
 app.use(express.urlencoded({ extended: true }));
 app.set("views", "./views")
 app.set("view engine", "pug")
+app.use(express.static(path.join(__dirname, "views")))
 
 
 app.get("/", (req, res) => {
@@ -17,7 +18,7 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
     // const word = req.body.word;
     console.log(req.body)
-    res.render("index")
+    res.render("index", req.body)
 })
 
 app.listen(3000, () => {

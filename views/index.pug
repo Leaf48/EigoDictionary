@@ -2,9 +2,11 @@ doctype=html
 html
     head
         title Hello world!
+        link(rel="stylesheet", href="index.css")
     body
         h1 welcome!
-        form(action="/", method="post")
-            p fuck!
+        form(action="/", method="post").form
+            p#test fuck!
             input(type="text" name="word")
             input(type="submit" value="submit")
+        h2 Word: #{word}
