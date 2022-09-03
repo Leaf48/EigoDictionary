@@ -1,10 +1,7 @@
-//- include layouts/form.pug
-doctype=html
-html
-    head
-        title Hello world!
-        link(rel="stylesheet", href="index.css")
-    body
-        h1 welcome!
-        block _form
-        h2 Word: #{word}
+extends layouts/form.pug
+
+block form
+    form(action="/", method="post").form
+        p#test fuck!
+        input(type="text" name="word")
+        input(type="submit" value="submit")

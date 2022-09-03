@@ -1,6 +1,7 @@
 import express from "express"
 import path from "path"
 import bodyParser from "body-parser"
+import weblio from "./src/platforms/weblio"
 
 
 const app = express()
@@ -15,9 +16,12 @@ app.get("/", (req, res) => {
     // res.sendFile(path.join("index"))
     res.render("index")
 })
-app.post("/", (req, res) => {
-    // const word = req.body.word;
-    console.log(req.body)
+app.post("/", async (req, res) => {
+    weblio(req.body.word)
+        .then(res =>{
+            console.log(res)
+        })
+    // console.log(req.body)
     res.render("index", req.body)
 })
 
