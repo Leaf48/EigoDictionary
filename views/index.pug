@@ -1,3 +1,4 @@
+//- include layouts/form.pug
 doctype=html
 html
     head
@@ -5,8 +6,5 @@ html
         link(rel="stylesheet", href="index.css")
     body
         h1 welcome!
-        form(action="/", method="post").form
-            p#test fuck!
-            input(type="text" name="word")
-            input(type="submit" value="submit")
+        block _form
         h2 Word: #{word}
