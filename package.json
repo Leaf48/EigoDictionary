@@ -8,7 +8,8 @@
     "start": "node .",
     "tsc": "tsc",
     "clean": "rimraf dist",
-    "build": "npm-run-all clean tsc"
+    "build": "npm-run-all clean tsc",
+    "build-linux": "npm-run-all tsc"
   },
   "repository": {
     "type": "git",
