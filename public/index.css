@@ -8,13 +8,18 @@ body{
     background-color: #1c1e1e;
     color: aliceblue;
     margin: 0;
+    padding-top: 6rem;
 }
 
+/* header */
 .header_wrapper{
     width: 100%;
     background-color: #161616;
     margin-bottom: 2rem;
     padding: 1rem 0 1rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 .header_search{
     height: 3rem;
@@ -27,10 +32,10 @@ body{
     padding: 0;
     background-color: #333333;
     height: 100%;
-    padding: 0 1rem 0 1rem;
+    padding: 0 3rem 0 1rem;
     border-radius: 0.2rem;
 }
-.header_search input{
+.header_search input, #search-sendButton{
     background: none;
     height: 100%;
     outline: none;
@@ -41,24 +46,31 @@ body{
     font-size: 1rem;
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.05rem;
-    width: 90%;
+    width: 100%;
 }
 #search-button{
-    width: 10%;
-    /* position: absolute; */
-    /* top: -26.9rem; */
+    width: auto;
+    color: var(--accent-color);
+    padding: 0;
+    position: absolute;
+    top: 0rem;
 }
 
-.title{
-    padding-left: 1rem;
+/* all wrapper */
+.allWrapper{
+    /* margin-top: 10rem; */
 }
+
+/* contents */
 .wrapper{
     margin: 0 auto;
     max-width: 60rem;
     font-family: Fira code, monospace;
     border: solid 0.3rem var(--accent-color);
 }
-
+.title{
+    padding-left: 1rem;
+}
 .content > h2{
     text-decoration: underline solid var(--accent-color);
     text-underline-offset: 0.5rem;
