@@ -1,7 +1,22 @@
 extends layouts/form.pug
 
 block form
-    form(action="/", method="post").form
-        p#test fuck!
-        input(type="text" name="word")
-        input(type="submit" value="submit")
+    .searchbar
+        form(action="/", method="post" id="search")
+            input(type="text" name="word")
+        button(type="submit", form="search")
+
+block weblio
+    .wrapper
+        h1.title weblio
+        .content
+            h2 Meanings
+            p #{weblio['meanings']}
+        .content
+            h2 詞
+            p #{weblio['terms']}
+        .content
+            h2 Sentences
+            each v in weblio['sentences']
+                p #{v}
+

@@ -4,6 +4,9 @@ html
         title Hello world!
         link(rel="stylesheet", href="index.css")
     body
-        h1 welcome!
         block form
-        h2 Word: #{word}
+        //- h2 Word: #{word}
+
+        if status == "success"
+            block weblio
+

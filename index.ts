@@ -22,9 +22,10 @@ app.post("/", async (req, res) => {
             console.log("success")
 
             res.render("index", {
+                "status": "success",
                 "word": req.body.word,
                 "weblio": {
-                    "meaning": r[0],
+                    "meanings": r[0],
                     "terms": r[1],
                     "sentences": r[2]
                 }
@@ -34,7 +35,7 @@ app.post("/", async (req, res) => {
             console.log("err")
             console.log(err)
             res.render("index", {
-                "word": req.body.word
+                "status": "faield"
             })
         })
 })
