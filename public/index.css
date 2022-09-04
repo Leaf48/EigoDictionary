@@ -27,7 +27,7 @@ body{
     padding: 0;
     background-color: #333333;
     height: 100%;
-    padding: 0 2rem 0 1rem;
+    padding: 0 1rem 0 1rem;
     border-radius: 0.2rem;
 }
 .header_search input{
@@ -36,13 +36,17 @@ body{
     outline: none;
     border: 0;
 }
-#search_text{
+#search-text{
     color: white;
-    width: 100%;
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 0.05rem;
+    width: 90%;
 }
 #search-button{
-    position: absolute;
-    top: -26.9rem;
+    width: 10%;
+    /* position: absolute; */
+    /* top: -26.9rem; */
 }
 
 .title{
