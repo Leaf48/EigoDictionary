@@ -1,2 +1,2 @@
 # EigoDictionary
-It collects meanings from various English Dictionary.
+A tool that shows English meanings retrieving from various English Dictionary.
