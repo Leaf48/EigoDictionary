@@ -1,10 +1,11 @@
 extends layouts/form.pug
 
 block form
-    .searchbar
-        form(action="/", method="post" id="search")
-            input(type="text" name="word")
-        button(type="submit", form="search")
+    .header_wrapper
+        .header_search
+            form(action="/" method="post")
+                input(type="text" name="word")#search_text
+                <input type="submit" value="&#xf3eb;" class="fa-brands fa-searchengin" id="search-button">
 
 block weblio
     .wrapper
