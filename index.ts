@@ -35,7 +35,7 @@ app.post("/", async (req, res) => {
             console.log("err")
             console.log(err)
             res.render("index", {
-                "status": "faield"
+                "status": "failed"
             })
         })
 })
