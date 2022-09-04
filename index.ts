@@ -18,11 +18,25 @@ app.get("/", (req, res) => {
 })
 app.post("/", async (req, res) => {
     weblio(req.body.word)
-        .then(res =>{
-            console.log(res)
+        .then(r =>{
+            console.log("success")
+
+            res.render("index", {
+                "word": req.body.word,
+                "weblio": {
+                    "meaning": r[0],
+                    "terms": r[1],
+                    "sentences": r[2]
+                }
+            })
         })
-    // console.log(req.body)
-    res.render("index", req.body)
+        .catch(err => {
+            console.log("err")
+            console.log(err)
+            res.render("index", {
+                "word": req.body.word
+            })
+        })
 })
 
 app.listen(3000, () => {
